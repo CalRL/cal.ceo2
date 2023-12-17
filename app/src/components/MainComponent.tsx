@@ -50,7 +50,7 @@ export const MainComponent: React.FC = () => {
             marginTop="-10%"
             display="inline-flex"
           >
-            <span className="circle status-circle online-circle"></span>
+            <StatusCircle />
             <span className="status-fix">
               <GetColor />
             </span>
@@ -103,4 +103,34 @@ const GetColor: React.FC = () => {
       {statusString}
     </Text>
   );
+};
+
+// <span className="circle status-circle online-circle"></span>
+export const StatusCircle: React.FC = () => {
+  const [status, setStatus] = React.useState<string>();
+
+  useEffect(() => {
+    const getDiscordInfomation = async () => {
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+        });
+        const data = await response.json();
+        const discordStatus = data.data.discord_status;
+        setStatus(discordStatus);
+      } catch (error) {
+        console.error("Error fetching Discord information", error);
+      }
+    };
+
+    getDiscordInfomation();
+  }, []);
+
+  return (
+    <span
+      className={`circle status-circle ${
+        status === "online" ? "online-circle" : "offline-circle"
+      }`}
+    ></span>
+  )
 };
