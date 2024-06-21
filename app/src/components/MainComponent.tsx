@@ -100,7 +100,7 @@ const GetColor: React.FC = () => {
     statusString = status.charAt(0).toUpperCase() + status.slice(1);
   }
   function getStatus() {
-    if(status === "online") {
+    if(status === "online".toLowerCase()) {
       return "#43b581"; 
     } else if(status == "idle") {
         return "#faa61a";
@@ -141,7 +141,7 @@ export const StatusCircle: React.FC = () => {
   }, []);
 
   function getStatus() {
-    if(status === "online") {
+    if(status === "online".toLowerCase()) {
       return "online-circle"; 
     } else if(status == "idle") {
         return "idle-circle";

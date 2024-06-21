@@ -15,7 +15,7 @@ import {
   SiChakraui,
   SiSpigotmc,
 } from "react-icons/si";
-import { FaJava, FaPython, FaNodeJs } from "react-icons/fa6";
+import { FaJava, FaPython, FaNodeJs, FaReact } from "react-icons/fa6";
 
 export const RestAccordion: React.FC = () => {
   return (
@@ -122,21 +122,105 @@ export const RestAccordion: React.FC = () => {
                 Web:
               </div>
               <div className="flex space-x-3 justify-center">
-                <SiTypescript size={36} />
-                <SiTailwindcss size={36} />
-                <SiNextdotjs size={36} />
-                <SiChakraui size={36} />
-                <FaNodeJs size={36} />
+                <a
+                  href="https://www.typescriptlang.org/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiTypescript size={36} />
+                </a>
+
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiTailwindcss size={36} />
+                </a>
+                <a
+                  href="https://nextjs.org/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiNextdotjs size={36} />
+                </a>
+
+                <a
+                  href="https://react.dev/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <FaReact size={36} />
+                </a>
+
+                <a
+                  href="https://v2.chakra-ui.com/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiChakraui size={36} />
+                </a>
+
+                <a
+                  href="https://nodejs.org/en"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <FaNodeJs size={36} />
+                </a>
+                
               </div>
               <div className="text-2xl justify-center flex text-white font-semibold">
                 Other:
               </div>
               <div className="flex space-x-3 justify-center">
-                <SiCsharp size={36} />
-                <FaJava size={36} />
-                <SiSpigotmc size={36} />
-                <FaPython size={36} />
-                <SiMicrosoftazure size={36} />
+              <a
+                  href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiCsharp size={36} />
+                </a>
+                
+                <a
+                  href="https://www.java.com/en/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <FaJava size={36} />
+                </a>
+                
+                <a
+                  href="https://www.spigotmc.org/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiSpigotmc size={36} />
+                </a>
+                
+                <a
+                  href="https://www.python.org/"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <FaPython size={36} />
+                </a>
+                
+                <a
+                  href="https://azure.microsoft.com/en-us"
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                  <SiMicrosoftazure size={36} />
+                </a>
+                
+                {/* <a
+                  href=""
+                  target="_blank"
+                  className="hover:text-white transition-color duration-[250ms]"
+                >
+                   
+                </a>*/}
               </div>
             </div>
           </AccordionPanel>
