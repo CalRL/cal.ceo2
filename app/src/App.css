@@ -68,10 +68,13 @@
   display: inline-block;
 }
 .offline-circle {
-  background-color: #ff6565;
+  background-color: #f04747;
 }
 .online-circle {
-  background-color: #8eff9b;
+  background-color: #43b581;
+}
+.idle-circle {
+  background-color: #faa61a;
 }
 .status-circle {
   margin-right: 5%;

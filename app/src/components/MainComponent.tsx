@@ -97,10 +97,19 @@ const GetColor: React.FC = () => {
   if (typeof status === "string") {
     statusString = status.charAt(0).toUpperCase() + status.slice(1);
   }
+  function getStatus() {
+    if(status === "online") {
+      return "#43b581"; 
+    } else if(status == "idle") {
+        return "#faa61a";
+      } else {
+        return "#f04747";
+      }
+  }
   return (
     <Text
       display="inline"
-      color={status === "online" ? "#8EFF9B" : "#FF6565"}
+      color={getStatus()}
       className="status-fix"
     >
       {statusString}
@@ -129,10 +138,19 @@ export const StatusCircle: React.FC = () => {
     getDiscordInfomation();
   }, []);
 
+  function getStatus() {
+    if(status === "online") {
+      return "online-circle"; 
+    } else if(status == "idle") {
+        return "idle-circle";
+      } else {
+        return "offline-circle";
+      }
+  }
   return (
     <span
       className={`circle status-circle ${
-        status === "online" ? "online-circle" : "offline-circle"
+        getStatus()
       }`}
     ></span>
   );
