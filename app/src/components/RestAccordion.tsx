@@ -20,7 +20,7 @@ import { FaJava, FaPython, FaNodeJs, FaReact } from "react-icons/fa6";
 export const RestAccordion: React.FC = () => {
   return (
     <div className="text-coloring">
-      <Accordion allowMultiple={false} defaultIndex={0}>
+      <Accordion allowMultiple={false} defaultIndex={0} allowToggle>
         <AccordionItem border="none">
           <div>
             <AccordionButton>
@@ -43,7 +43,7 @@ export const RestAccordion: React.FC = () => {
                   href="https://github.com/CalRL"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline text-[#ADD8E6]"
+                  className="hover:underline font-semibold text-lg text-[#ADD8E6]"
                 >
                   github
                 </a>{" "}
@@ -52,21 +52,10 @@ export const RestAccordion: React.FC = () => {
               <ul className="list-disc list-inside mt-4 text-left">
                 <li>
                   <a
-                    href="https://github.com/CalRL/ShiroJS"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#ADD8E6] hover:underline"
-                  >
-                    ShiroJS
-                  </a>
-                  : A discord bot made in JavaScript using discord.js.
-                </li>
-                <li>
-                  <a
                     href="https://github.com/CalRL/JustAnotherChatRoom"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#ADD8E6] hover:underline"
+                    className="text-[#ADD8E6] font-semibold text-lg hover:underline"
                   >
                     JustAnotherChatRoom
                   </a>
@@ -78,7 +67,7 @@ export const RestAccordion: React.FC = () => {
                     href="https://github.com/CalRL/cal.ceo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#ADD8E6] hover:underline"
+                    className="text-[#ADD8E6] font-semibold text-lg hover:underline"
                   >
                     cal.ceo
                   </a>
@@ -87,15 +76,14 @@ export const RestAccordion: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/CalRL/Hubbly"
+                    href="https://www.spigotmc.org/resources/hubbly.117243/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#ADD8E6] hover:underline"
+                    className="text-[#ADD8E6] font-semibold text-lg hover:underline"
                   >
                     Hubbly
                   </a>
-                  : [WIP] An All in One plugin for Minecraft servers,
-                  specifically lobbies.
+                  : [WIP] An All in One plugin for Minecraft lobbies.
                 </li>
               </ul>
             </div>
@@ -168,20 +156,19 @@ export const RestAccordion: React.FC = () => {
                 >
                   <FaNodeJs size={36} />
                 </a>
-                
               </div>
               <div className="text-2xl justify-center flex text-white font-semibold">
                 Other:
               </div>
               <div className="flex space-x-3 justify-center">
-              <a
+                <a
                   href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
                   target="_blank"
                   className="hover:text-white transition-color duration-[250ms]"
                 >
                   <SiCsharp size={36} />
                 </a>
-                
+
                 <a
                   href="https://www.java.com/en/"
                   target="_blank"
@@ -189,7 +176,7 @@ export const RestAccordion: React.FC = () => {
                 >
                   <FaJava size={36} />
                 </a>
-                
+
                 <a
                   href="https://www.spigotmc.org/"
                   target="_blank"
@@ -197,7 +184,7 @@ export const RestAccordion: React.FC = () => {
                 >
                   <SiSpigotmc size={36} />
                 </a>
-                
+
                 <a
                   href="https://www.python.org/"
                   target="_blank"
@@ -205,7 +192,7 @@ export const RestAccordion: React.FC = () => {
                 >
                   <FaPython size={36} />
                 </a>
-                
+
                 <a
                   href="https://azure.microsoft.com/en-us"
                   target="_blank"
@@ -213,7 +200,7 @@ export const RestAccordion: React.FC = () => {
                 >
                   <SiMicrosoftazure size={36} />
                 </a>
-                
+
                 {/* <a
                   href=""
                   target="_blank"

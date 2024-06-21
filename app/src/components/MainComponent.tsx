@@ -5,6 +5,7 @@ import { Grid, GridItem, Text } from "@chakra-ui/react";
 import { BadgesComponent } from "./BadgesComponent";
 import Rest from "./Rest";
 import RestAccordion from "./RestAccordion";
+import { FaCircle } from "react-icons/fa";
 const url = "https://api.lanyard.rest/v1/users/242276511028084738";
 
 export const MainComponent: React.FC = () => {
@@ -48,26 +49,24 @@ export const MainComponent: React.FC = () => {
             </GridItem>
             <GridItem
               area={"status"}
-              className="text-3x1"
-              fontWeight={600}
-              marginTop="-10%"
-              display="inline-flex"
+              className=" flex text-4xl items-center space-x-2 font-semibold mt-[-10%]"
+              justifyContent="start"
             >
               <StatusCircle />
-              <span className="status-fix">
-                <GetColor />
-              </span>
+              <GetColor />
             </GridItem>
           </Grid>
         </div>
-
-        <div className="text-3x1 text-coloring">
-          software developer; student; full-stack;
-        </div>
-        <div className="text-paragraph text-coloring margin-top-10">
-          hi! I'm cal! I'm a software developer and student from the united
-          kingdom. I'm mostly interested in front end web development, <br></br>
-          but i also do some backend work too.
+          <div className="text-3x1 text-coloring w-[95%] lg:block lg:w-full lg:text-start text-center items-center lg:content-normal">
+            software developer; student; full-stack;
+          </div>
+          <div className="text-paragraph text-coloring margin-top-10 lg:w-full lg:text-start text-center flex justify-center lg:block lg:justify-start">
+            <p className="lg:w-full w-[80%]">
+            hi! I'm cal! I'm a software developer and student from the united
+            kingdom. I'm mostly interested in making minecraft addons <br></br>
+            right now, but I'm also doing full-stack web development.
+            </p>
+            
         </div>
         <BadgesComponent />
         <RestAccordion />
@@ -100,26 +99,22 @@ const GetColor: React.FC = () => {
     statusString = status.charAt(0).toUpperCase() + status.slice(1);
   }
   function getStatus() {
-    if(status === "online".toLowerCase()) {
-      return "#43b581"; 
-    } else if(status == "idle") {
-        return "#faa61a";
-      } else {
-        return "#f04747";
-      }
+    if (status === "online".toLowerCase()) {
+      return "text-[#43b581]";
+    } else if (status == "idle") {
+      return "text-[#faa61a]";
+    } else {
+      return "text-[#f04747]";
+    }
   }
+
   return (
-    <Text
-      display="inline"
-      color={getStatus()}
-      className="status-fix"
-    >
-      {statusString}
-    </Text>
+    <div className="mb-1 flex">
+      {" "}
+      <div className={getStatus()}>{statusString}</div>
+    </div>
   );
 };
-
-// <span className="circle status-circle online-circle"></span>
 export const StatusCircle: React.FC = () => {
   const [status, setStatus] = React.useState<string>();
 
@@ -138,22 +133,17 @@ export const StatusCircle: React.FC = () => {
     };
 
     getDiscordInfomation();
+    console.log(getDiscordInfomation())
   }, []);
 
   function getStatus() {
-    if(status === "online".toLowerCase()) {
-      return "online-circle"; 
-    } else if(status == "idle") {
-        return "idle-circle";
-      } else {
-        return "offline-circle";
-      }
+    if (status === "online".toLowerCase()) {
+      return <FaCircle className="text-[#43b581] inline-block" size={28} />;
+    } else if (status == "idle") {
+      return <FaCircle className="text-[#faa61a] inline-block" size={28} />;
+    } else {
+      return <div className="circle offline-circle"></div>;
+    }
   }
-  return (
-    <span
-      className={`circle status-circle ${
-        getStatus()
-      }`}
-    ></span>
-  );
+  return <span className="inline-flex items-center">{getStatus()}</span>;
 };
