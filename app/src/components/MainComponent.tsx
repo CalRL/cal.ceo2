@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import "../App.css";
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import { BadgesComponent } from "./BadgesComponent";
-import { Navbar } from "./Navbar";
+import Rest from "./Rest";
 const url = "https://api.lanyard.rest/v1/users/242276511028084738";
 
 export const MainComponent: React.FC = () => {
   return (
     <div className="main flex-nowrap">
-      <div className="mt-[10%] div-sizing">
+      <div className="mt-[10%] w-[576px] h-full">
         <div className="">
           <Grid
             templateAreas={`"avatar name pronouns"
@@ -69,6 +69,7 @@ export const MainComponent: React.FC = () => {
           but i also do some backend work too.
         </div>
         <BadgesComponent />
+        <Rest />
       </div>
     </div>
   );
