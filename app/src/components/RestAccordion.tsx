@@ -162,7 +162,7 @@ export const RestAccordion: React.FC = () => {
               </div>
               <div className="flex space-x-3 justify-center">
                 <a
-                  href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+                  href="https://learn.microsoft.com/en-us/dotnet/csharp/"
                   target="_blank"
                   className="hover:text-white transition-color duration-[250ms]"
                 >
